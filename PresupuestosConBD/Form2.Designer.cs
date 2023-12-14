@@ -29,7 +29,7 @@ namespace PresupuestosConBD
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgPresupuestos = new System.Windows.Forms.DataGridView();
             this.Codigo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Fecha = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Total = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -38,25 +38,26 @@ namespace PresupuestosConBD
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.mostrarDatosFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPresupuestos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgPresupuestos
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgPresupuestos.AllowUserToAddRows = false;
+            this.dgPresupuestos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgPresupuestos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
             this.Fecha,
             this.Total});
-            this.dataGridView1.Location = new System.Drawing.Point(253, 72);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(630, 359);
-            this.dataGridView1.TabIndex = 0;
+            this.dgPresupuestos.Location = new System.Drawing.Point(12, 43);
+            this.dgPresupuestos.Name = "dgPresupuestos";
+            this.dgPresupuestos.ReadOnly = true;
+            this.dgPresupuestos.RowHeadersWidth = 51;
+            this.dgPresupuestos.RowTemplate.Height = 24;
+            this.dgPresupuestos.Size = new System.Drawing.Size(1268, 649);
+            this.dgPresupuestos.TabIndex = 0;
             // 
             // Codigo
             // 
@@ -90,6 +91,7 @@ namespace PresupuestosConBD
             this.añadirToolStripMenuItem,
             this.modificarToolStripMenuItem,
             this.borrarToolStripMenuItem,
+            this.mostrarDatosFacturaToolStripMenuItem,
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -107,13 +109,13 @@ namespace PresupuestosConBD
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(87, 24);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
             this.modificarToolStripMenuItem.Text = "Modificar";
             // 
             // borrarToolStripMenuItem
             // 
             this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
-            this.borrarToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.borrarToolStripMenuItem.Size = new System.Drawing.Size(93, 36);
             this.borrarToolStripMenuItem.Text = "Borrar";
             // 
             // salirToolStripMenuItem
@@ -123,19 +125,25 @@ namespace PresupuestosConBD
             this.salirToolStripMenuItem.Text = "Volver";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
+            // mostrarDatosFacturaToolStripMenuItem
+            // 
+            this.mostrarDatosFacturaToolStripMenuItem.Name = "mostrarDatosFacturaToolStripMenuItem";
+            this.mostrarDatosFacturaToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
+            this.mostrarDatosFacturaToolStripMenuItem.Text = "Mostrar datos Factura";
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1292, 704);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgPresupuestos);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgPresupuestos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -145,7 +153,7 @@ namespace PresupuestosConBD
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgPresupuestos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
@@ -154,5 +162,6 @@ namespace PresupuestosConBD
         private System.Windows.Forms.ToolStripMenuItem modificarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem borrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mostrarDatosFacturaToolStripMenuItem;
     }
 }

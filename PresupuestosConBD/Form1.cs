@@ -25,11 +25,7 @@ namespace PresupuestosConBD
         {
             try
             {
-                string host = TXHost.Text;
-                string user = TXUser.Text;
-                string password = TXContra.Text;
-                string bd = TXBD.Text;
-                cadenaconex = "server="+host+";user id="+user+";password="+password+";database="+bd+";persistsecurityinfo=True";
+                
                 mycon = new MySqlConnection(cadenaconex);
                 mycon.Open();
                 return true;
@@ -44,7 +40,12 @@ namespace PresupuestosConBD
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 MenuPresupuesto = new Form2(cadenaconex,this);
+            string host = TXHost.Text;
+            string user = TXUser.Text;
+            string password = TXContra.Text;
+            string bd = TXBD.Text;
+            cadenaconex = "server=" + host + ";user id=" + user + ";password=" + password + ";database=" + bd + ";persistsecurityinfo=True";
+            Form2 MenuPresupuesto = new Form2(cadenaconex, this);
             if (conectar())
             {
                 MenuPresupuesto.Show();
