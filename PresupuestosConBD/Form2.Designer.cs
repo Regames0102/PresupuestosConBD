@@ -37,8 +37,8 @@ namespace PresupuestosConBD
             this.añadirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.borrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mostrarDatosFacturaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgPresupuestos)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,6 +58,7 @@ namespace PresupuestosConBD
             this.dgPresupuestos.RowTemplate.Height = 24;
             this.dgPresupuestos.Size = new System.Drawing.Size(1268, 649);
             this.dgPresupuestos.TabIndex = 0;
+            this.dgPresupuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPresupuestos_CellContentClick);
             // 
             // Codigo
             // 
@@ -118,18 +119,18 @@ namespace PresupuestosConBD
             this.borrarToolStripMenuItem.Size = new System.Drawing.Size(93, 36);
             this.borrarToolStripMenuItem.Text = "Borrar";
             // 
+            // mostrarDatosFacturaToolStripMenuItem
+            // 
+            this.mostrarDatosFacturaToolStripMenuItem.Name = "mostrarDatosFacturaToolStripMenuItem";
+            this.mostrarDatosFacturaToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
+            this.mostrarDatosFacturaToolStripMenuItem.Text = "Mostrar datos Factura";
+            // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
             this.salirToolStripMenuItem.Size = new System.Drawing.Size(95, 36);
             this.salirToolStripMenuItem.Text = "Volver";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
-            // 
-            // mostrarDatosFacturaToolStripMenuItem
-            // 
-            this.mostrarDatosFacturaToolStripMenuItem.Name = "mostrarDatosFacturaToolStripMenuItem";
-            this.mostrarDatosFacturaToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
-            this.mostrarDatosFacturaToolStripMenuItem.Text = "Mostrar datos Factura";
             // 
             // Form2
             // 

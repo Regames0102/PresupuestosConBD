@@ -95,5 +95,10 @@ namespace PresupuestosConBD
         {
            
         }
+
+        private void dgPresupuestos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
