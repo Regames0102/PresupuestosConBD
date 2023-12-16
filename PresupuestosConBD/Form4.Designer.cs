@@ -50,28 +50,31 @@ namespace PresupuestosConBD
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label1.Location = new System.Drawing.Point(291, 127);
+            this.label1.Location = new System.Drawing.Point(218, 103);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 29);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.textBox1.Location = new System.Drawing.Point(435, 121);
+            this.textBox1.Location = new System.Drawing.Point(326, 98);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox1.Name = "textBox1";
             this.textBox1.ShortcutsEnabled = false;
-            this.textBox1.Size = new System.Drawing.Size(141, 35);
+            this.textBox1.Size = new System.Drawing.Size(107, 30);
             this.textBox1.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label2.Location = new System.Drawing.Point(303, 179);
+            this.label2.Location = new System.Drawing.Point(227, 145);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(81, 29);
+            this.label2.Size = new System.Drawing.Size(64, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "label2";
             // 
@@ -79,9 +82,10 @@ namespace PresupuestosConBD
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label3.Location = new System.Drawing.Point(303, 229);
+            this.label3.Location = new System.Drawing.Point(227, 186);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(81, 29);
+            this.label3.Size = new System.Drawing.Size(64, 25);
             this.label3.TabIndex = 3;
             this.label3.Text = "label3";
             // 
@@ -89,9 +93,10 @@ namespace PresupuestosConBD
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label4.Location = new System.Drawing.Point(303, 279);
+            this.label4.Location = new System.Drawing.Point(227, 227);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(81, 29);
+            this.label4.Size = new System.Drawing.Size(64, 25);
             this.label4.TabIndex = 4;
             this.label4.Text = "label4";
             // 
@@ -99,9 +104,10 @@ namespace PresupuestosConBD
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label5.Location = new System.Drawing.Point(303, 329);
+            this.label5.Location = new System.Drawing.Point(227, 267);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 29);
+            this.label5.Size = new System.Drawing.Size(64, 25);
             this.label5.TabIndex = 5;
             this.label5.Text = "label5";
             // 
@@ -109,58 +115,65 @@ namespace PresupuestosConBD
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label6.Location = new System.Drawing.Point(303, 379);
+            this.label6.Location = new System.Drawing.Point(227, 308);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(81, 29);
+            this.label6.Size = new System.Drawing.Size(64, 25);
             this.label6.TabIndex = 6;
             this.label6.Text = "label6";
             // 
             // textBox2
             // 
             this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.textBox2.Location = new System.Drawing.Point(435, 171);
+            this.textBox2.Location = new System.Drawing.Point(326, 139);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(141, 35);
+            this.textBox2.Size = new System.Drawing.Size(107, 30);
             this.textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
             this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.textBox3.Location = new System.Drawing.Point(435, 224);
+            this.textBox3.Location = new System.Drawing.Point(326, 182);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(141, 35);
+            this.textBox3.Size = new System.Drawing.Size(107, 30);
             this.textBox3.TabIndex = 8;
             // 
             // textBox4
             // 
             this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.textBox4.Location = new System.Drawing.Point(435, 273);
+            this.textBox4.Location = new System.Drawing.Point(326, 222);
+            this.textBox4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(141, 35);
+            this.textBox4.Size = new System.Drawing.Size(107, 30);
             this.textBox4.TabIndex = 9;
             // 
             // textBox5
             // 
             this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.textBox5.Location = new System.Drawing.Point(435, 323);
+            this.textBox5.Location = new System.Drawing.Point(326, 262);
+            this.textBox5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(141, 35);
+            this.textBox5.Size = new System.Drawing.Size(107, 30);
             this.textBox5.TabIndex = 10;
             // 
             // textBox6
             // 
             this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.textBox6.Location = new System.Drawing.Point(435, 373);
+            this.textBox6.Location = new System.Drawing.Point(326, 303);
+            this.textBox6.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(141, 35);
+            this.textBox6.Size = new System.Drawing.Size(107, 30);
             this.textBox6.TabIndex = 11;
             // 
             // Añadir
             // 
             this.Añadir.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.Añadir.Location = new System.Drawing.Point(283, 437);
+            this.Añadir.Location = new System.Drawing.Point(206, 354);
+            this.Añadir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Añadir.Name = "Añadir";
-            this.Añadir.Size = new System.Drawing.Size(133, 58);
+            this.Añadir.Size = new System.Drawing.Size(104, 47);
             this.Añadir.TabIndex = 12;
             this.Añadir.Text = "Añadir";
             this.Añadir.UseVisualStyleBackColor = true;
@@ -169,9 +182,10 @@ namespace PresupuestosConBD
             // Cancelar
             // 
             this.Cancelar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.Cancelar.Location = new System.Drawing.Point(474, 437);
+            this.Cancelar.Location = new System.Drawing.Point(350, 354);
+            this.Cancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Cancelar.Name = "Cancelar";
-            this.Cancelar.Size = new System.Drawing.Size(129, 58);
+            this.Cancelar.Size = new System.Drawing.Size(108, 47);
             this.Cancelar.TabIndex = 13;
             this.Cancelar.Text = "Cancelar";
             this.Cancelar.UseVisualStyleBackColor = true;
@@ -180,17 +194,18 @@ namespace PresupuestosConBD
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 24.8F);
-            this.label7.Location = new System.Drawing.Point(288, 59);
+            this.label7.Location = new System.Drawing.Point(216, 48);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(302, 48);
+            this.label7.Size = new System.Drawing.Size(248, 39);
             this.label7.TabIndex = 14;
             this.label7.Text = "Menu de lineas";
             // 
             // Form4
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(923, 558);
+            this.ClientSize = new System.Drawing.Size(692, 453);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.Cancelar);
             this.Controls.Add(this.Añadir);
@@ -206,6 +221,7 @@ namespace PresupuestosConBD
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Form4";
             this.Text = "Form4";
             this.ResumeLayout(false);

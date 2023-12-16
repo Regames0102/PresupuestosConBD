@@ -78,11 +78,12 @@ namespace PresupuestosConBD
             if (meterPresupuesto())
             {
                 MessageBox.Show("Introducido correctamente");
+                this.Size = new Size(1144, 702);
+                CenterToScreen();
             }
             else
             {
-                this.Size = new System.Drawing.Size(1144, 702);
-                CenterToScreen();
+                
             }
             
         }

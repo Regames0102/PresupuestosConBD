@@ -15,7 +15,7 @@ namespace PresupuestosConBD
         string cadenaconex;
         public Form4()
         {
-            InitializeComponent(cadenaconex);
+            InitializeComponent();
         }
 
         private void Añadir_Click(object sender, EventArgs e)
