@@ -16,6 +16,7 @@ namespace PresupuestosConBD
         Form1 login;
         string cadenaconex;
         public MySqlConnection mycon;
+        bool modificar;
         public Form2(string cadenaconex,Form1 login)
         {
             InitializeComponent();
@@ -27,7 +28,7 @@ namespace PresupuestosConBD
         public void mostrardatos()
         {
            
-            string query = "SELECT Codigo, Fecha, Total from presupuestos;";
+            string query = "SELECT Id, Fecha, Total from presupuestos;";
             MySqlCommand comandoDB = new MySqlCommand(query, mycon);
             MySqlDataReader reader;
             try
@@ -88,7 +89,8 @@ namespace PresupuestosConBD
 
         private void añadirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 crearPresu = new Form3(cadenaconex);
+            modificar = false;
+            Form3 crearPresu = new Form3(cadenaconex,modificar);
             crearPresu.Show();
         }
         private void fecha()
@@ -99,6 +101,13 @@ namespace PresupuestosConBD
         private void dgPresupuestos_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void modificarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modificar = true;
+            Form3 modificarPresu = new Form3(cadenaconex,modificar);
+            modificarPresu.Show();
         }
     }
 }

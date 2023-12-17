@@ -50,9 +50,10 @@ namespace PresupuestosConBD
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label1.Location = new System.Drawing.Point(90, 40);
+            this.label1.Location = new System.Drawing.Point(68, 32);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 29);
+            this.label1.Size = new System.Drawing.Size(75, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Codigo";
             // 
@@ -60,35 +61,39 @@ namespace PresupuestosConBD
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.label2.Location = new System.Drawing.Point(100, 100);
+            this.label2.Location = new System.Drawing.Point(75, 81);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(83, 29);
+            this.label2.Size = new System.Drawing.Size(67, 25);
             this.label2.TabIndex = 1;
             this.label2.Text = "Fecha";
             // 
             // TXCodigo
             // 
             this.TXCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.TXCodigo.Location = new System.Drawing.Point(211, 34);
+            this.TXCodigo.Location = new System.Drawing.Point(158, 28);
+            this.TXCodigo.Margin = new System.Windows.Forms.Padding(2);
             this.TXCodigo.Name = "TXCodigo";
-            this.TXCodigo.Size = new System.Drawing.Size(282, 35);
+            this.TXCodigo.Size = new System.Drawing.Size(212, 30);
             this.TXCodigo.TabIndex = 2;
             // 
             // Fecha
             // 
             this.Fecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
             this.Fecha.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.Fecha.Location = new System.Drawing.Point(211, 94);
+            this.Fecha.Location = new System.Drawing.Point(158, 76);
+            this.Fecha.Margin = new System.Windows.Forms.Padding(2);
             this.Fecha.Name = "Fecha";
-            this.Fecha.Size = new System.Drawing.Size(282, 35);
+            this.Fecha.Size = new System.Drawing.Size(212, 30);
             this.Fecha.TabIndex = 3;
             // 
             // Guardar
             // 
             this.Guardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.Guardar.Location = new System.Drawing.Point(563, 55);
+            this.Guardar.Location = new System.Drawing.Point(422, 45);
+            this.Guardar.Margin = new System.Windows.Forms.Padding(2);
             this.Guardar.Name = "Guardar";
-            this.Guardar.Size = new System.Drawing.Size(152, 48);
+            this.Guardar.Size = new System.Drawing.Size(114, 39);
             this.Guardar.TabIndex = 5;
             this.Guardar.Text = "Guardar";
             this.Guardar.UseVisualStyleBackColor = true;
@@ -96,6 +101,8 @@ namespace PresupuestosConBD
             // 
             // dglineas
             // 
+            this.dglineas.AllowUserToAddRows = false;
+            this.dglineas.AllowUserToDeleteRows = false;
             this.dglineas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dglineas.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Codigo,
@@ -112,11 +119,12 @@ namespace PresupuestosConBD
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dglineas.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dglineas.Location = new System.Drawing.Point(42, 283);
+            this.dglineas.Location = new System.Drawing.Point(32, 230);
+            this.dglineas.Margin = new System.Windows.Forms.Padding(2);
             this.dglineas.Name = "dglineas";
             this.dglineas.RowHeadersWidth = 51;
             this.dglineas.RowTemplate.Height = 24;
-            this.dglineas.Size = new System.Drawing.Size(1027, 349);
+            this.dglineas.Size = new System.Drawing.Size(770, 284);
             this.dglineas.TabIndex = 6;
             // 
             // Codigo
@@ -164,9 +172,10 @@ namespace PresupuestosConBD
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
-            this.button1.Location = new System.Drawing.Point(54, 216);
+            this.button1.Location = new System.Drawing.Point(37, 167);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(140, 52);
+            this.button1.Size = new System.Drawing.Size(105, 42);
             this.button1.TabIndex = 7;
             this.button1.Text = "Añadir";
             this.button1.UseVisualStyleBackColor = true;
@@ -174,9 +183,9 @@ namespace PresupuestosConBD
             // 
             // Form3
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1126, 655);
+            this.ClientSize = new System.Drawing.Size(844, 532);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dglineas);
             this.Controls.Add(this.Guardar);
@@ -184,6 +193,7 @@ namespace PresupuestosConBD
             this.Controls.Add(this.TXCodigo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form3";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form3";

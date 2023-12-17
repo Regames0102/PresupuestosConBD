@@ -52,6 +52,5 @@ namespace PresupuestosConBD
                 this.Hide();
             }
         }
-
     }
 }

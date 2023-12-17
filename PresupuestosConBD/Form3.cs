@@ -16,13 +16,21 @@ namespace PresupuestosConBD
         string cadenaconex;
         int siguienteId;
         public MySqlConnection mycon;
-        public Form3(string cadenaconex)
+        int idalto;
+        int idlinea;
+        int idart;
+        string desc;
+        int cant;
+        int precio;
+        bool modificar;
+        public Form3(string cadenaconex, bool modificar)
         {
             this.cadenaconex = cadenaconex;
             conectar();
             InitializeComponent();
-            int idalto = Convert.ToInt32(ObtenerSiguienteIdAlumnos());
+            idalto = Convert.ToInt32(ObtenerSiguienteIdAlumnos());
             TXCodigo.Text = idalto.ToString();
+            this.modificar = modificar;
 
             this.Size= new System.Drawing.Size(711, 200);
             
@@ -32,7 +40,7 @@ namespace PresupuestosConBD
             siguienteId = 1; // Valor predeterminado si no hay registros en la base de datos
             try
             {
-                string query = "SELECT MAX(Codigo) FROM presupuestos";
+                string query = "SELECT MAX(Id) FROM presupuestos";
                 MySqlCommand comandoDB = new MySqlCommand(query, mycon);
 
                 // Ejecuta la consulta y obtén el resultado
@@ -74,17 +82,20 @@ namespace PresupuestosConBD
 
         private void Guardar_Click(object sender, EventArgs e)
         {
+            if (!modificar)
+            {
+                if (meterPresupuesto())
+                {
+                    MessageBox.Show("Introducido correctamente");
+                    this.Size = new Size(1144, 702);
+                    CenterToScreen();
+                }
+                else
+                {
+
+                }
+            }
             
-            if (meterPresupuesto())
-            {
-                MessageBox.Show("Introducido correctamente");
-                this.Size = new Size(1144, 702);
-                CenterToScreen();
-            }
-            else
-            {
-                
-            }
             
         }
         private bool meterPresupuesto() {
@@ -93,7 +104,7 @@ namespace PresupuestosConBD
             string fecha = Fecha.Value.ToString("yyyy-MM-dd");
             try
             { 
-                string query = "INSERT INTO presupuestos (Codigo,Fecha,Total) VALUES (@Id,@Fecha,@total)";
+                string query = "INSERT INTO presupuestos (Id,Fecha,Total) VALUES (@Id,@Fecha,@total)";
                 MySqlCommand comandoDB = new MySqlCommand(query, mycon);
                 comandoDB.Parameters.AddWithValue("@Id", id);
                 comandoDB.Parameters.AddWithValue("@Fecha", fecha);
@@ -103,15 +114,51 @@ namespace PresupuestosConBD
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error al agregar usuario a la base de datos: {ex.Message}");
+                MessageBox.Show($"Error al agregar presupuestos a la base de datos: {ex.Message}");
             }
             return false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form4 lineas = new Form4();
-            lineas.ShowDialog();
+            Form4 lineas = new Form4(cadenaconex);
+            lineas.TXIDPresu.Value = idalto;
+            if (lineas.ShowDialog()==DialogResult.OK)
+            {
+                 idlinea = lineas.id;
+                 idart = lineas.idArt;
+                 desc = lineas.desc;
+                 cant = lineas.cant;
+                 precio = lineas.precio;
+                dglineas.Rows.Add();
+                int rowIndex = dglineas.Rows.Count - 1;
+                dglineas.Rows[rowIndex].Cells[0].Value=idlinea;
+                dglineas.Rows[rowIndex].Cells[1].Value=idalto.ToString();
+                dglineas.Rows[rowIndex].Cells[2].Value=idart;
+                dglineas.Rows[rowIndex].Cells[3].Value=desc;
+                dglineas.Rows[rowIndex].Cells[4].Value=cant;
+                dglineas.Rows[rowIndex].Cells[5].Value=precio;
+                añadirlineaBD();
+            }
+        }
+        private void añadirlineaBD()
+        {
+            try
+            {
+                string query = "INSERT INTO lineas (Id,IdPresu,IdArticulo,Descripcion,Cantidad,Precio) VALUES (@id,@idpresu,@idart,@desc,@cant,@precio)";
+                MySqlCommand comandoDB = new MySqlCommand(query, mycon);
+                comandoDB.Parameters.AddWithValue("@id", idlinea);
+                comandoDB.Parameters.AddWithValue("@idpresu", idalto.ToString()); ;
+                comandoDB.Parameters.AddWithValue("@idart", idart);
+                comandoDB.Parameters.AddWithValue("@desc", desc);
+                comandoDB.Parameters.AddWithValue("@cant", cant);
+                comandoDB.Parameters.AddWithValue("@precio", precio);
+                comandoDB.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error al agregar lineas a la base de datos: {ex.Message}");
+            }
         }
     }
 }
