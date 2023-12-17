@@ -196,6 +196,7 @@ namespace PresupuestosConBD
             // 
             // TXprec
             // 
+            this.TXprec.DecimalPlaces = 2;
             this.TXprec.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
             this.TXprec.Location = new System.Drawing.Point(326, 310);
             this.TXprec.Name = "TXprec";
@@ -244,7 +245,7 @@ namespace PresupuestosConBD
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox TXdesc;
+        public System.Windows.Forms.TextBox TXdesc;
         private System.Windows.Forms.Button Añadir;
         private System.Windows.Forms.Button Cancelar;
         private System.Windows.Forms.Label label7;

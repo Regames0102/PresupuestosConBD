@@ -60,6 +60,7 @@ namespace PresupuestosConBD
             this.dgPresupuestos.Size = new System.Drawing.Size(951, 527);
             this.dgPresupuestos.TabIndex = 0;
             this.dgPresupuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPresupuestos_CellContentClick);
+            this.dgPresupuestos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPresupuestos_CellDoubleClick);
             // 
             // Codigo
             // 
@@ -121,12 +122,14 @@ namespace PresupuestosConBD
             this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
             this.borrarToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.borrarToolStripMenuItem.Text = "Borrar";
+            this.borrarToolStripMenuItem.Click += new System.EventHandler(this.borrarToolStripMenuItem_Click);
             // 
             // mostrarDatosFacturaToolStripMenuItem
             // 
             this.mostrarDatosFacturaToolStripMenuItem.Name = "mostrarDatosFacturaToolStripMenuItem";
             this.mostrarDatosFacturaToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
             this.mostrarDatosFacturaToolStripMenuItem.Text = "Mostrar datos Factura";
+            this.mostrarDatosFacturaToolStripMenuItem.Click += new System.EventHandler(this.mostrarDatosFacturaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
@@ -139,7 +142,7 @@ namespace PresupuestosConBD
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(969, 572);
+            this.ClientSize = new System.Drawing.Size(969, 575);
             this.Controls.Add(this.dgPresupuestos);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
@@ -158,7 +161,7 @@ namespace PresupuestosConBD
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgPresupuestos;
+        public System.Windows.Forms.DataGridView dgPresupuestos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;

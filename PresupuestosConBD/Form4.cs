@@ -18,16 +18,18 @@ namespace PresupuestosConBD
         public int idArt;
         public string desc;
         public int cant;
-        public int precio;
+        public decimal precio;
         public int siguienteId;
         string cadenaconex;
         public MySqlConnection mycon;
         public MySqlConnection mycon2;
-        public Form4(string cadenaconex)
+        bool modificar;
+        public Form4(string cadenaconex, bool modificar)
         {
             InitializeComponent();
             this.cadenaconex = cadenaconex;
             conectar();
+            this.modificar = modificar;
         }
         public bool conectar()
         {
@@ -55,7 +57,7 @@ namespace PresupuestosConBD
             this.idArt = (int)TXIDArt.Value;
             this.desc = TXdesc.Text;
             this.cant = (int)TXCant.Value;
-            this.precio = (int)TXprec.Value;
+            this.precio = TXprec.Value;
         }
 
         private void TXIDArt_ValueChanged(object sender, EventArgs e)
@@ -74,10 +76,10 @@ namespace PresupuestosConBD
                         if (reader.Read())
                         {
                             string descripcion = reader["Descripcion"].ToString();
-                            double precio = Convert.ToDouble(reader["Precio"]);
+                            decimal precio = Convert.ToDecimal(reader["Precio"]);
 
                             TXdesc.Text = descripcion;
-                            TXprec.Value = Convert.ToDecimal(precio);
+                            TXprec.Value = precio;
                         }
                         else
                         {
@@ -96,48 +98,17 @@ namespace PresupuestosConBD
                 mycon.Close(); // Asegúrate de cerrar la conexión en caso de error
             }
         }
-        private int ObtenerSiguientesIds()
-        {
-            mycon.Open();
-            mycon2.Open();
-            siguienteId = 1; // Valor predeterminado si no hay registros en la base de datos
-            try
-            {
-                string query = "SELECT MAX(Id) FROM lineas";
-                string query2 = "SELECT MAX(Id) FROM presupuestos";
-                MySqlCommand comandoDB = new MySqlCommand(query, mycon);
-                MySqlCommand comandoDB2 = new MySqlCommand(query2, mycon2);
-
-                // Ejecuta la consulta y obtén el resultado
-                object resultado = comandoDB.ExecuteScalar();
-
-                if (resultado != DBNull.Value)
-                {
-                    // Si hay registros, obtén el máximo y suma uno
-                    siguienteId = Convert.ToInt32(resultado) + 1;
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error al obtener el siguiente ID: " + ex.Message);
-            }
-            finally
-            {
-                mycon.Close();
-            }
-
-            return siguienteId;
-        }
+        
 
         private void Form4_Load(object sender, EventArgs e)
         {
-            ObtenerSiguientesIds();
-            this.TXID.Value = siguienteId;
+   
+
         }
 
         private void Cancelar_Click(object sender, EventArgs e)
         {
-
+            this.Close();
         }
     }
 }

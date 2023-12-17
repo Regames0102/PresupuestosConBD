@@ -82,7 +82,7 @@ namespace PresupuestosConBD
             // 
             this.TXContra.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
             this.TXContra.Location = new System.Drawing.Point(298, 158);
-            this.TXContra.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXContra.Margin = new System.Windows.Forms.Padding(2);
             this.TXContra.Name = "TXContra";
             this.TXContra.Size = new System.Drawing.Size(127, 30);
             this.TXContra.TabIndex = 3;
@@ -93,7 +93,7 @@ namespace PresupuestosConBD
             // 
             this.TXUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
             this.TXUser.Location = new System.Drawing.Point(296, 120);
-            this.TXUser.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXUser.Margin = new System.Windows.Forms.Padding(2);
             this.TXUser.Name = "TXUser";
             this.TXUser.Size = new System.Drawing.Size(127, 30);
             this.TXUser.TabIndex = 4;
@@ -103,7 +103,7 @@ namespace PresupuestosConBD
             // 
             this.TXHost.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
             this.TXHost.Location = new System.Drawing.Point(296, 83);
-            this.TXHost.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXHost.Margin = new System.Windows.Forms.Padding(2);
             this.TXHost.Name = "TXHost";
             this.TXHost.Size = new System.Drawing.Size(127, 30);
             this.TXHost.TabIndex = 5;
@@ -124,7 +124,7 @@ namespace PresupuestosConBD
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.8F);
             this.button1.Location = new System.Drawing.Point(167, 253);
-            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 64);
             this.button1.TabIndex = 7;
@@ -136,18 +136,19 @@ namespace PresupuestosConBD
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
             this.button2.Location = new System.Drawing.Point(308, 253);
-            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.button2.Margin = new System.Windows.Forms.Padding(2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 64);
             this.button2.TabIndex = 8;
             this.button2.Text = "Cancelar";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // TXBD
             // 
             this.TXBD.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.8F);
             this.TXBD.Location = new System.Drawing.Point(300, 201);
-            this.TXBD.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TXBD.Margin = new System.Windows.Forms.Padding(2);
             this.TXBD.Name = "TXBD";
             this.TXBD.Size = new System.Drawing.Size(125, 30);
             this.TXBD.TabIndex = 9;
@@ -197,7 +198,7 @@ namespace PresupuestosConBD
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
