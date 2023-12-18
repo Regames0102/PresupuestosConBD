@@ -51,14 +51,16 @@ namespace PresupuestosConBD
             this.Codigo,
             this.Fecha,
             this.Total});
-            this.dgPresupuestos.Location = new System.Drawing.Point(12, 43);
+            this.dgPresupuestos.Location = new System.Drawing.Point(9, 35);
+            this.dgPresupuestos.Margin = new System.Windows.Forms.Padding(2);
             this.dgPresupuestos.Name = "dgPresupuestos";
             this.dgPresupuestos.ReadOnly = true;
             this.dgPresupuestos.RowHeadersWidth = 51;
             this.dgPresupuestos.RowTemplate.Height = 24;
-            this.dgPresupuestos.Size = new System.Drawing.Size(1268, 649);
+            this.dgPresupuestos.Size = new System.Drawing.Size(951, 527);
             this.dgPresupuestos.TabIndex = 0;
             this.dgPresupuestos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPresupuestos_CellContentClick);
+            this.dgPresupuestos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgPresupuestos_CellDoubleClick);
             // 
             // Codigo
             // 
@@ -96,53 +98,58 @@ namespace PresupuestosConBD
             this.salirToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1292, 40);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(969, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // añadirToolStripMenuItem
             // 
             this.añadirToolStripMenuItem.Name = "añadirToolStripMenuItem";
-            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(98, 36);
+            this.añadirToolStripMenuItem.Size = new System.Drawing.Size(80, 29);
             this.añadirToolStripMenuItem.Text = "Añadir";
             this.añadirToolStripMenuItem.Click += new System.EventHandler(this.añadirToolStripMenuItem_Click);
             // 
             // modificarToolStripMenuItem
             // 
             this.modificarToolStripMenuItem.Name = "modificarToolStripMenuItem";
-            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(130, 36);
+            this.modificarToolStripMenuItem.Size = new System.Drawing.Size(105, 29);
             this.modificarToolStripMenuItem.Text = "Modificar";
+            this.modificarToolStripMenuItem.Click += new System.EventHandler(this.modificarToolStripMenuItem_Click);
             // 
             // borrarToolStripMenuItem
             // 
             this.borrarToolStripMenuItem.Name = "borrarToolStripMenuItem";
-            this.borrarToolStripMenuItem.Size = new System.Drawing.Size(93, 36);
+            this.borrarToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.borrarToolStripMenuItem.Text = "Borrar";
+            this.borrarToolStripMenuItem.Click += new System.EventHandler(this.borrarToolStripMenuItem_Click);
             // 
             // mostrarDatosFacturaToolStripMenuItem
             // 
             this.mostrarDatosFacturaToolStripMenuItem.Name = "mostrarDatosFacturaToolStripMenuItem";
-            this.mostrarDatosFacturaToolStripMenuItem.Size = new System.Drawing.Size(259, 36);
+            this.mostrarDatosFacturaToolStripMenuItem.Size = new System.Drawing.Size(207, 29);
             this.mostrarDatosFacturaToolStripMenuItem.Text = "Mostrar datos Factura";
+            this.mostrarDatosFacturaToolStripMenuItem.Click += new System.EventHandler(this.mostrarDatosFacturaToolStripMenuItem_Click);
             // 
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(95, 36);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(77, 29);
             this.salirToolStripMenuItem.Text = "Volver";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Form2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1292, 704);
+            this.ClientSize = new System.Drawing.Size(969, 575);
             this.Controls.Add(this.dgPresupuestos);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form2";
+            this.Text = "Menu de Presupuestos";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form2_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.dgPresupuestos)).EndInit();
             this.menuStrip1.ResumeLayout(false);
@@ -154,7 +161,7 @@ namespace PresupuestosConBD
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgPresupuestos;
+        public System.Windows.Forms.DataGridView dgPresupuestos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Codigo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Fecha;
         private System.Windows.Forms.DataGridViewTextBoxColumn Total;
